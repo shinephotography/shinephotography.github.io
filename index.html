@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/x-icon" href="/favicon.jpeg">
+<script src="/js/iframeResizer.min.js"></script>
 
 <style>
   body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -35,10 +36,10 @@
     color: white;
   }
 
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
+  iframe {
+          width: 1px;
+          min-width: 100%;
+        }
   </style>
 </head>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -57,7 +58,7 @@
   </div>
   <div class="w3-bar-block">
     <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SERVICES</a>
+    <a href="#service" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>SERVICES</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
   </div>
   <div class="w3-panel w3-large">
@@ -85,7 +86,12 @@
     </div>
     </div>
   </header>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/f3JXeqg2Jqk?si=oL-aLK6xSuocpW0V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!--video grid-->
+
+  <iframe id="myIframe" src="https://video.cs50.io/pdtv_TcfcBo"></iframe>
+      <script>
+        iFrameResize({ log: true }, '#myIframe')
+      </script>
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
@@ -130,10 +136,10 @@
     </div>
   </div>
 
-  
+
 
   <!-- Images of Me -->
-  <div class="w3-row-padding w3-padding-16" id="about">
+  <div class="w3-row-padding w3-padding-16" >
     <div class="w3-col m6">
       <img src="/me.jpg" alt="Me" style="width:100%">
       <div class="w3-container w3-white">
@@ -143,7 +149,7 @@
   </div>
 
   <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>Services</b></h4>
+    <h4 id="service"><b>Services</b></h4>
     <p>Manoj Roy is available for a wide range of photography services, including but not limited to:</p>
     <ul>
       <li>Portrait Photography</li>
@@ -181,11 +187,13 @@
         <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
           <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
           <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">1GB Storage</li>
           <li class="w3-padding-16">Videography</li>
+          <li class="w3-padding-16">1080p</li>
+          <li class="w3-padding-16">25 pages of Album photos</li>
+          <li class="w3-padding-16">32 GB storage</li>
           <li class="w3-padding-16">
-            <h2>₹1000</h2>
-            <span class="w3-opacity">per event</span>
+            <h2>₹25,000</h2>
+            <span class="w3-opacity"> 2 days of coverage</span>
           </li>
 
         </ul>
@@ -195,11 +203,13 @@
         <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
           <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
           <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
           <li class="w3-padding-16">Videography</li>
+          <li class="w3-padding-16">1080p</li>
+          <li class="w3-padding-16">30 pages of Album photos</li>
+          <li class="w3-padding-16">64 GB storage</li>
           <li class="w3-padding-16">
-            <h2>₹1500</h2>
-            <span class="w3-opacity">per event</span>
+            <h2>₹30,000</h2>
+            <span class="w3-opacity">3 days of coverage</span>
           </li>
 
         </ul>
@@ -210,11 +220,13 @@
           <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
 
           <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">Unlimited Storage</li>
-          <li class="w3-padding-16">Videography</li>
+          <li class="w3-padding-16">Cinematography</li>
+          <li class="w3-padding-16">1080p</li>
+          <li class="w3-padding-16">30 pages of Album photos</li>
+          <li class="w3-padding-16">64 GB storage</li>
           <li class="w3-padding-16">
-            <h2> ₹2500</h2>
-            <span class="w3-opacity">per event</span>
+            <h2>₹40,000</h2>
+            <span class="w3-opacity">3 days of coverage</span>
           </li>
 
         </ul>
@@ -232,14 +244,16 @@
       </div>
       <div class="w3-third w3-teal">
         <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-        <p>South Colony, NJP</p>
+        South Colony, NJP
       </div>
       <div class="w3-third w3-dark-grey">
         <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
         <a href="tel:+91 89270 85132"> +91 89270 85132</a>
       </div>
     </div>
-
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d445.64316002910215!2d88.43983065219223!3d26.675835712287395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e443412562c06b%3A0x63c4b18bff21499c!2sShine%20Photography!5e0!3m2!1sen!2sin!4v1696943163597!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-32 w3-dark-grey">
@@ -272,6 +286,13 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/iframe-resizer/js/iframeResizer.min.js"></script>
+<script>
+    document.querySelectorAll('iframe[src^="https://video.cs50.io/"]').forEach(function(element) {
+        element.addEventListener('load', function() {
+            iFrameResize(element);
+        });
+    });
+</script>
 </body>
 </html>
